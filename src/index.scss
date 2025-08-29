@@ -1,0 +1,8 @@
+/* 기본 리셋 */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body,#root{height:100%}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+
+/* Google Fonts 예: Playfair Display(타이틀), Inter(텍스트) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@600;700;900&display=swap');
