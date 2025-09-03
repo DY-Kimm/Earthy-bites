@@ -1,16 +1,18 @@
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom"; // ★ useLocation 추가
 import { useAuth } from "../context/AuthContext";
 import { FiArrowLeft } from "react-icons/fi";
 
 export default function Login() {
   const { login } = useAuth();
   const nav = useNavigate();
+  const loc = useLocation();                                   // ★ 현재 위치/넘겨받은 state
+  const redirectTo = loc.state?.redirectTo || "/";             // ★ 없으면 홈으로(원하면 "/likes")
 
   function onSubmit(e) {
     e.preventDefault();
     const id = new FormData(e.currentTarget).get("id");
-    login(id || "guest");
-    nav(-1);
+    login({ id: id || "guest", name: id || "Guest" });
+    nav(redirectTo, { replace: true });                        // ★ 원래 가려던 곳으로
   }
 
   return (
@@ -21,7 +23,6 @@ export default function Login() {
 
       <div className="auth-wrap">
         <div className="auth-avatar" aria-hidden>
-          {/* 사용자 아이콘 (시안 같은 굵기) */}
           <svg width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="#BDBDBD" strokeWidth="1.7">
             <circle cx="12" cy="8" r="3.8" />
             <path d="M4 20c1.6-3.3 4.4-5 8-5s6.4 1.7 8 5" strokeLinecap="round"/>
@@ -41,7 +42,6 @@ export default function Login() {
         </form>
 
         <div className="auth-sub">
-          {/* <button type="button" className="auth-link muted">아이디 찾기 / 비밀번호 찾기</button> */}
           <div className="auth-link muted">
             계정이 없으신가요? <Link to="/signup">회원가입</Link>
           </div>

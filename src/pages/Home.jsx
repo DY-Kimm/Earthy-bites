@@ -1,4 +1,5 @@
 import CountryCarousel from "../components/CountryCarousel";
+import WorldMapPins from "../components/WorldMapPins";
 
 export default function Home(){
   return (
@@ -7,6 +8,7 @@ export default function Home(){
       <section className="hero">
         <div className="container">
           <img src="../img/main_banner.png" alt="메인지도" />
+          <WorldMapPins/>
         </div>
       </section>
 

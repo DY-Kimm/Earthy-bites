@@ -4,7 +4,7 @@ import { DISHES } from "../data/data";
 import DishCard from "../components/DishCard";
 import FilterSelect from "../components/FilterSelect";
 
-const TYPES = ["전체", "Rice", "Bread", "Noodle"]; // 첫 항목은 '전체'
+const TYPES = ["전체", "Rice", "Bread", "Noodle","Soup"]; // 첫 항목은 '전체'
 
 export default function CountryPage(){
   const { name } = useParams();
