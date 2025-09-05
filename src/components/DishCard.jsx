@@ -15,6 +15,7 @@ export default function DishCard({dish, showLike=true}){
       </div>
       {showLike && <LikeButton dishId={dish.id}/>}
       <Link to={`/dish/${dish.id}`} style={{position:"absolute", inset:0}} aria-label={dish.name}/>
+      
     </div>
   )
 }

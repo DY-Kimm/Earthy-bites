@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { DISHES } from "../data/data";
 import DishCard from "../components/DishCard";
 import FilterSelect from "../components/FilterSelect";
+import LikeButton from "../components/LikeButton";
 
 const TYPES = ["전체", "Rice", "Bread", "Noodle","Soup"]; // 첫 항목은 '전체'
 
@@ -36,6 +37,16 @@ export default function CountryPage(){
         {dishes.map(d => <DishCard key={d.id} dish={d}/>)}
         {dishes.length === 0 && <p style={{color:"#777"}}>조건에 맞는 음식이 없어요.</p>}
       </div>
+
+      {/* <div className="foods">
+      {foods.map((food) => (
+        <div className="card" key={food.id}>
+          <h3>{food.name}</h3>
+         
+          <LikeButton uid={user?.id} id={food?.id} />
+        </div>
+      ))}
+    </div> */}
     </div>
   );
 }

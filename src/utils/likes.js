@@ -1,38 +1,39 @@
-const key = (uid) => `likes:${String(uid)}`;
+const key = (uid) => `likes:${uid}`;
 
-export function getLikedIds(uid) {
+// 저장 포맷: [{id, name, image, country, tags}]  // 과거 버전의 [id]도 자동 호환
+export function getLikedItems(uid) {
   if (!uid) return [];
   try {
     const raw = JSON.parse(localStorage.getItem(key(uid)) || "[]");
-    return [...new Set(raw.map((v) => String(v)))];
+    // 과거: [id] 였던 경우 -> 호환 (빈 객체로 변환)
+    if (Array.isArray(raw) && raw.every(v => typeof v !== 'object')) {
+      return raw.map(id => ({ id }));
+    }
+    return raw;
   } catch {
     return [];
   }
 }
 
-export function setLiked(uid, id, liked) {
-  const sid = String(id);
-  if (!uid || !sid) return;
-  const set = new Set(getLikedIds(uid));
-  liked ? set.add(sid) : set.delete(sid);
-  localStorage.setItem(key(uid), JSON.stringify([...set]));
-}
-
 export function isLiked(uid, id) {
-  return getLikedIds(uid).includes(String(id));
+  if (!uid || !id) return false;
+  return getLikedItems(uid).some(it => it.id === id);
 }
 
-export function toggleLiked(uid, id) {
-  const next = !isLiked(uid, id);
-  setLiked(uid, id, next);
-  return next;
+export function setLiked(uid, item, liked) {
+  if (!uid || !item?.id) return;
+  const arr = getLikedItems(uid);
+  const i = arr.findIndex(it => it.id === item.id);
+  if (liked) {
+    if (i === -1) arr.push(item);
+  } else {
+    if (i !== -1) arr.splice(i, 1);
+  }
+  localStorage.setItem(key(uid), JSON.stringify(arr));
 }
 
-// 과거 'dish-' 프리픽스 제거
-export function normalizeLikesForUser(uid) {
-  if (!uid) return;
-  const fixed = [
-    ...new Set(getLikedIds(uid).map((s) => String(s).replace(/^dish-/, ""))),
-  ];
-  localStorage.setItem(key(uid), JSON.stringify(fixed));
+export function toggleLiked(uid, item) {
+  const liked = isLiked(uid, item.id);
+  setLiked(uid, item, !liked);
+  return !liked;
 }

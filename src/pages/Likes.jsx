@@ -1,42 +1,60 @@
-// pages/Likes.jsx
-import { Link } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
-import { getLikedIds } from "../utils/likes";
-import { DISHES } from "../data/dishes"; // 전체 모음 (여기 경로는 네 프로젝트에 맞게)
+import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { getLikedItems, setLiked } from "../utils/likes";
 
-export default function Likes() {
-  const { isLoggedIn, user } = useAuth();
+export default function LikesPage({ uid }) {
+  const nav = useNavigate();
+  const loc = useLocation();
+  const [items, setItems] = useState([]);
 
-  if (!isLoggedIn) {
-    return (
-      <main className="page likes">
-        <h1>LIKES</h1>
-        <p style={{marginTop: 16}}>로그인 후 좋아요한 음식들을 볼 수 있어요.</p>
-      </main>
-    );
-  }
+  useEffect(() => {
+    if (!uid) {
+      // 미로그인 → 로그인 페이지로
+      nav(`/login?next=${encodeURIComponent(loc.pathname + loc.search)}`);
+      return;
+    }
+    setItems(getLikedItems(uid));
+  }, [uid, nav, loc]);
 
-  const ids = getLikedIds(user.id);
-  const map = new Map(DISHES.map(d => [String(d.id), d])); // 빠른 매칭
-  const items = ids.map(id => map.get(String(id))).filter(Boolean);
+  const remove = (id) => {
+    const it = items.find(v => v.id === id);
+    setLiked(uid, it, false);
+    setItems(prev => prev.filter(v => v.id !== id));
+  };
+
+  if (!uid) return null;
 
   return (
-    <main className="page likes">
-      <h1>LIKES</h1>
+    <main className="likes-page">
+      <div className="likes-hero">
+        <h1>MY SCRAP <span className="heart">❤️</span></h1>
+        <hr />
+      </div>
+
       {items.length === 0 ? (
-        <p style={{marginTop: 16}}>아직 좋아요한 음식이 없어요.</p>
-      ) : (
-        <div className="grid">
-          {items.map(d => (
-            <Link key={d.id} to={`/dish/${d.id}`} className="card">
-              <img src={d.image} alt={d.name} />
-              <div className="card-body">
-                <strong>{d.name}</strong>
-                {/* 필요하면 태그/국가 표시 */}
-              </div>
-            </Link>
-          ))}
+        <div className="empty">
+          아직 스크랩한 음식이 없어요. 카드의 “좋아요”를 눌러 저장해 보세요!
         </div>
+      ) : (
+        <section className="grid">
+          {items.map(it => (
+            <article key={it.id} className="tile">
+              <div className="thumb">
+                {it.image ? <img src={it.image} alt={it.name} /> : <div className="ph" />}
+                <button className="mini-like" onClick={() => remove(it.id)} title="스크랩 해제">❤️</button>
+              </div>
+              <div className="meta">
+                <div className="name">{it.name || it.id}</div>
+                {it.country && <div className="country">{it.country}</div>}
+                {Array.isArray(it.tags) && it.tags.length > 0 && (
+                  <div className="tags">
+                    {it.tags.map(t => <span key={t} className="tag">{t}</span>)}
+                  </div>
+                )}
+              </div>
+            </article>
+          ))}
+        </section>
       )}
     </main>
   );

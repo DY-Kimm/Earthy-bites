@@ -1,8 +1,9 @@
+// src/components/LikeButton.jsx
 import { useState, useEffect } from "react";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { isLiked, setLiked as saveLiked } from "../utils/likes";
+import { isLiked, toggleLiked } from "../utils/likes";
 
 export default function LikeButton({
   id, size = 16, className = "", onToggle, requireLogin = true
@@ -10,36 +11,32 @@ export default function LikeButton({
   const { user, isLoggedIn } = useAuth();
   const [liked, setLiked] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation();
-
-  const uid = user?.id ? String(user.id) : null;
-  const targetId = String(id ?? "");
+  const location = useLocation(); // 현재 페이지로 돌아오기 위함
 
   useEffect(() => {
-    if (!isLoggedIn || !uid || !targetId) { setLiked(false); return; }
-    setLiked(isLiked(uid, targetId));
-  }, [isLoggedIn, uid, targetId]);
+    setLiked(isLoggedIn ? isLiked(user?.id, id) : false);
+  }, [isLoggedIn, user?.id, id]);
 
   const handleClick = (e) => {
+    // 카드 <Link> 네비게이션 방지
     e.preventDefault();
     e.stopPropagation();
 
     if (requireLogin && !isLoggedIn) {
+      // ✅ 확인 누르면 로그인 페이지로 이동
       const ok = window.confirm("로그인이 필요합니다 🙂\n로그인 화면으로 이동할까요?");
       if (ok) {
-        navigate("/login", { state: { redirectTo: location.pathname + location.search } });
+        navigate("/login", {
+          replace: false,
+          state: { redirectTo: location.pathname + location.search } // 돌아올 위치 전달
+        });
       }
       return;
     }
-    if (!uid || !targetId) return; // 로그인 직후 보호
 
-    // UI 먼저 반영 → 저장소 기록
-    setLiked((prev) => {
-      const next = !prev;
-      saveLiked(uid, targetId, next);
-      onToggle?.(next);
-      return next;
-    });
+    const next = toggleLiked(user.id, id);
+    setLiked(next);
+    onToggle?.(next);
   };
 
   return (

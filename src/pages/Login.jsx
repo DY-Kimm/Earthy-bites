@@ -11,7 +11,7 @@ export default function Login() {
   function onSubmit(e) {
     e.preventDefault();
     const id = new FormData(e.currentTarget).get("id");
-    login({ id: id || "guest", name: id || "Guest" });
+    login(id || "guest");
     nav(redirectTo, { replace: true });                        // ★ 원래 가려던 곳으로
   }
 
