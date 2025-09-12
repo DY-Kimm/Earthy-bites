@@ -896,8 +896,8 @@ export const DISHES = [
     country:"UK",
     name:"Fish and Chips",
     type:["Seafood","Fry","Potato","Street"],
-    image:"https://source.unsplash.com/1400x900/?fish%20and%20chips,uk",
-    video:"",
+    image:"/img/uk/Fish and Chips.jpg",
+    video:"https://www.youtube.com/embed/q3RzBpuvUng?si=zyZJIG4s4LS44-73",
     desc:"바삭한 생선 튀김과 두 번 튀긴 두툼한 칩스를 함께 먹는 영국 대표 스트리트 푸드.",
     recipe:[
       "칩스: 감자를 두껍게 썰어 20분 찬물에 담근 뒤 물기를 완전히 제거",
@@ -913,8 +913,8 @@ export const DISHES = [
     country:"UK",
     name:"Sunday Roast",
     type:["Roast","Beef","Set"],
-    image:"https://source.unsplash.com/1400x900/?sunday%20roast,uk",
-    video:"",
+    image:"/img/uk/Sunday Roast.jpg",
+    video:"https://www.youtube.com/embed/UOSd9M3Xnz8?si=pUAcIIATXgx_UNjB",
     desc:"일요일에 가족과 즐기는 정통 로스트 세트(고기·로스트 포테이토·요크셔푸딩·그래비).",
     recipe:[
       "고기 준비: 소등심/닭/양다리 중 선택, 소금·후추·허브로 마리네이드",
@@ -930,8 +930,8 @@ export const DISHES = [
     country:"UK",
     name:"Full English Breakfast",
     type:["Breakfast","Pan-fry","Egg"],
-    image:"https://source.unsplash.com/1400x900/?english%20breakfast,uk",
-    video:"",
+    image:"/img/uk/Full English Breakfast.jpg",
+    video:"https://www.youtube.com/embed/qNnHS62uDHQ?si=GyDHC9UmvSsCUPOA",
     desc:"소시지·베이컨·계란·버섯·토마토·베이크드빈·토스트가 한 접시에 담긴 영국식 아침.",
     recipe:[
       "팬에서 소시지와 베이컨을 먼저 노릇하게 굽기",
@@ -946,9 +946,9 @@ export const DISHES = [
     id:"gb-yorkshirepudding",
     country:"UK",
     name:"Yorkshire Pudding",
-    type:["Baked","Side"],
-    image:"https://source.unsplash.com/1400x900/?yorkshire%20pudding,uk",
-    video:"",
+    type:["Baked","Side","Bread"],
+    image:"/img/uk/Yorkshire Pudding.jpg",
+    video:"https://www.youtube.com/embed/oxprPnZMlSI?si=Wc_rx6lZVppMry5A",
     desc:"뜨겁게 달군 틀에 반죽을 부어 번쩍 솟게 구워내는 바삭·비어있는 사이드.",
     recipe:[
       "반죽: 달걀·우유·밀가루를 동량 비율(부피)로 섞고 소금 한 꼬집, 30분 휴지",
@@ -961,9 +961,9 @@ export const DISHES = [
     id:"gb-scones",
     country:"UK",
     name:"Scones",
-    type:["Baked","Tea","Sweet"],
-    image:"https://source.unsplash.com/1400x900/?scones,uk",
-    video:"",
+    type:["Baked","Tea","Dessert"],
+    image:"/img/uk/Scones.jpg",
+    video:"https://www.youtube.com/embed/iBPlf_xCIc8?si=DB2O0mNzwoWPQj8N",
     desc:"애프터눈 티의 필수 아이템. 클로티드 크림과 잼과 함께.",
     recipe:[
       "박력분·베이킹파우더·설탕·소금을 섞고 차가운 버터를 손끝으로 모래상태가 되도록 섞기",
@@ -977,9 +977,9 @@ export const DISHES = [
     id:"gb-cottagepie",
     country:"UK",
     name:"Cottage Pie",
-    type:["Pie","Beef","Baked"],
-    image:"https://source.unsplash.com/1400x900/?cottage%20pie,uk",
-    video:"",
+    type:["Pie","Beef","Bread"],
+    image:"/img/uk/Cottage Pie.jpg",
+    video:"https://www.youtube.com/embed/FnmAyW-oHeY?si=j2YqgT96YxpK53BN",
     desc:"다진 소고기 스튜 위에 매시드 포테이토를 덮어 구운 가정식 파이.",
     recipe:[
       "소고기 다짐육을 갈색이 날 때까지 볶고, 양파·당근·셀러리를 더해 볶기",
@@ -995,8 +995,8 @@ export const DISHES = [
     country:"UK",
     name:"Beef Wellington",
     type:["Beef","Baked","Pastry"],
-    image:"https://source.unsplash.com/1400x900/?beef%20wellington,uk",
-    video:"",
+    image:"/img/uk/Beef Wellington.jpg",
+    video:"https://www.youtube.com/embed/ccDlUcoaxbM?si=iJYOM1re_9iTsYHN",
     desc:"안심·머스터드·버섯 득셀·프로슈토를 퍼프 페이스트리에 감싸 구운 클래식.",
     recipe:[
       "소고기 안심을 두면 시어링 후 머스터드를 바르고 식힘",
@@ -1012,8 +1012,8 @@ export const DISHES = [
     country:"UK",
     name:"Haggis",
     type:["Offal","Boil","Traditional"],
-    image:"https://source.unsplash.com/1400x900/?haggis,scotland",
-    video:"",
+    image:"/img/uk/Haggis.jpg",
+    video:"https://www.youtube.com/embed/B7A8GOgAm54?si=CJ32WbXtBAlPA_2q",
     desc:"양 내장·귀리·향신료를 섞어 케이싱에 채워 삶아 먹는 스코틀랜드 전통 요리.",
     recipe:[
       "베이스: 간 양간·심장·허파(또는 대체 간고기)를 잘게 다지고 양파 볶은 것·귀리(Oatmeal)·수지·향신료를 섞기",
@@ -1260,21 +1260,6 @@ export const DISHES = [
     ]
   },
   {
-    id:"eg-hummus",
-    country:"Egypt",
-    name:"Hummus",
-    type:["Dip","Vegan","Appetizer"],
-    image:"/img/egypt/Hummus.jpg",
-    video:"https://www.youtube.com/embed/lr-I2-nPQMY?si=JkEAehjSZzrMrOMV",
-    desc:"병아리콩을 타히니·레몬·마늘과 갈아 만든 부드러운 중동식 딥.",
-    recipe:[
-      "불린 병아리콩을 부드럽게 삶아 껍질을 벗기면 더 크리미",
-      "타히니·레몬즙·마늘·소금·올리브오일과 함께 갈아 점도 조절",
-      "접시에 펼쳐 올리브오일·파프리카·파슬리로 마무리",
-      "에이쉬/채소와 함께 딥으로"
-    ]
-  },
-  {
     id:"eg-rozbellaban",
     country:"Egypt",
     name:"Roz Bel Laban (Rice Pudding)",
@@ -1311,8 +1296,8 @@ export const DISHES = [
     country:"Morocco",
     name:"Couscous",
     type:["Grain","Stew","Set"],
-    image:"",
-    video:"",
+    image:"/img/morocco/Couscous.jpg",
+    video:"https://www.youtube.com/embed/GfNRbVquluA?si=4Hm-dSdetWX3t1zH",
     desc:"세몰리나 쿠스쿠스를 찜기에 쪄서 채소·고기 스튜와 함께 먹는 모로코 대표 한 상.",
     recipe:[
       "스튜: 냄비에 올리브오일을 두르고 양파·마늘을 볶은 뒤, 양고기/닭고기와 강황·생강·후추·라스엘 하나우트·사프란을 넣어 시어",
@@ -1327,8 +1312,8 @@ export const DISHES = [
     country:"Morocco",
     name:"Pastilla (Bastilla)",
     type:["Pastry","Baked","Sweet-Savory"],
-    image:"",
-    video:"",
+    image:"/img/morocco/Pastilla.jpg",
+    video:"https://www.youtube.com/embed/QdgGd1A2Bcg?si=KwpFqlVCVu1Mim0L",
     desc:"닭/비둘기 고기, 아몬드와 계피를 넣은 달짝지근·짭짤한 파이. 설탕가루와 계피로 마무리.",
     recipe:[
       "필링1(고기): 냄비에 양파·마늘·사프란·계피·생강·버터를 넣고 닭을 조려 익힌 뒤 살을 찢는다",
@@ -1341,10 +1326,10 @@ export const DISHES = [
   {
     id:"ma-tagine",
     country:"Morocco",
-    name:"Chicken Tagine with Preserved Lemon & Olives",
+    name:"Chicken Tagine",
     type:["Stew","Slow-cook","Chicken"],
-    image:"",
-    video:"",
+    image:"/img/morocco/Tagine.jpg",
+    video:"https://www.youtube.com/embed/TpsUQ7SbTXs?si=NU9Cu7dJt7hhWrYa",
     desc:"타지냄비에 보존 레몬과 올리브를 넣고 천천히 졸인 대표 타지네.",
     recipe:[
       "마리네이드: 마늘·생강·강황·커민·후추·파프리카·레몬즙·올리브오일을 섞어 닭에 문질러 30분",
@@ -1354,27 +1339,12 @@ export const DISHES = [
     ]
   },
   {
-    id:"ma-tanjia",
-    country:"Morocco",
-    name:"Tanjia Marrakchia",
-    type:["Stew","Slow-cook","Beef/Lamb"],
-    image:"",
-    video:"",
-    desc:"마라케시식 항아리 요리(‘탄지야’). 커민·사프란·보존 레몬 향으로 오래 천천히 익힌 고기.",
-    recipe:[
-      "고기에 마늘·커민·후추·사프란·파프리카·보존레몬 국물·올리브오일을 넣어 버무린다(스멘 한 꼬집 선택)",
-      "항아리/냄비에 넣고 물 소량을 부어 입구를 호일로 단단히 봉한다",
-      "오븐 150–160℃에서 3–4시간(또는 아주 약불) 천천히 익힌다",
-      "소스가 자작하게 남고 고기가 결 따라 부드럽게 찢어지면 레몬 조각·고수로 마무리"
-    ]
-  },
-  {
     id:"ma-khlii",
     country:"Morocco",
     name:"Khlii (Khlea)",
     type:["Preserved","Meat","Confit"],
-    image:"",
-    video:"",
+    image:"/img/morocco/Khlii.jpg",
+    video:"https://www.youtube.com/embed/aUbnNd-jqoY?si=2X3bkxbVR1mvSY-1",
     desc:"향신료에 절이고 말린 뒤 지방에 푹 익혀 보관하는 모로코식 육보관식. 계란과 함께 자주 조리.",
     recipe:[
       "소고기를 길게 저며 소금·식초·마늘·커민·코리앤더·후추로 재운 뒤 그늘에서 말린다",
@@ -1388,8 +1358,8 @@ export const DISHES = [
     country:"Morocco",
     name:"Khobz (Round Bread)",
     type:["Bread","Baked","Staple"],
-    image:"",
-    video:"",
+    image:"/img/morocco/Khobz.jpg",
+    video:"https://www.youtube.com/embed/cfvhtrGBrg4?si=EdiQKyEDaau3sfVw",
     desc:"두툼하고 둥근 일상 빵. 수프·타지네와 곁들이거나 속을 갈라 샌드처럼 먹는다.",
     recipe:[
       "밀가루·세몰리나(선택)·이스트·소금·미지근한 물로 반죽해 매끈해질 때까지 치댄다",
@@ -1403,8 +1373,8 @@ export const DISHES = [
     country:"Morocco",
     name:"Hummus",
     type:["Dip","Vegan","Appetizer"],
-    image:"",
-    video:"",
+    image:"/img/morocco/Hummus.jpg",
+    video:"https://www.youtube.com/embed/lr-I2-nPQMY?si=JkEAehjSZzrMrOMV",
     desc:"병아리콩·타히니·레몬·마늘을 곱게 갈아 만든 크리미한 디핑 소스.",
     recipe:[
       "불린 병아리콩을 매우 부드럽게 삶고 껍질을 벗기면 더 매끈",
@@ -1417,9 +1387,9 @@ export const DISHES = [
     id:"ma-msemen",
     country:"Morocco",
     name:"Msemen",
-    type:["Flatbread","Pan-fry","Breakfast"],
-    image:"",
-    video:"",
+    type:["Bread","Pan-fry","Breakfast"],
+    image:"/img/morocco/Msemen.jpg",
+    video:"https://www.youtube.com/embed/DzUrKoZ10fM?si=gKhOHms5JWZuND_j",
     desc:"기름과 버터로 접어 겹을 낸 사각 팬케이크. 벌집 같은 결이 특징.",
     recipe:[
       "밀가루+미세 세몰리나·소금·물로 부드럽고 매끈한 반죽을 만든 뒤 작은 공으로 나눠 20분 휴지",
@@ -1433,9 +1403,9 @@ export const DISHES = [
     id:"ma-sfenj",
     country:"Morocco",
     name:"Sfenj",
-    type:["Fry","Dessert","Street"],
-    image:"",
-    video:"",
+    type:["Fry","Dessert","Street","Bread"],
+    image:"/img/morocco/Sfenj.jpg",
+    video:"https://www.youtube.com/embed/-taxOvc_Bbo?si=keJfrop-ZJnjcgYN",
     desc:"바삭 겉과 쫄깃 속의 이스트 도넛. 설탕을 살짝 묻혀 뜨끈할 때 먹는다.",
     recipe:[
       "강력분·이스트·소금·물로 매우 끈적한 반죽을 만들어 1–2시간 발효",
@@ -1450,8 +1420,8 @@ export const DISHES = [
     country:"Kenya",
     name:"Ugali",
     type:["Staple","Maize","Side"],
-    image:"",
-    video:"",
+    image:"/img/kenya/Ugali.jpg",
+    video:"https://www.youtube.com/embed/sEjpLif2hVY?si=fbvhDGoSMTxR64mj",
     desc:"옥수수가루를 물에 졸여 단단하게 만든 케냐의 대표 주식.",
     recipe:[
       "냄비에 물을 끓이고 소금을 약간 넣는다",
@@ -1466,8 +1436,8 @@ export const DISHES = [
     country:"Kenya",
     name:"Sukuma Wiki",
     type:["Vegetable","Stir-fry","Vegan"],
-    image:"",
-    video:"",
+    image:"/img/kenya/Sukuma Wiki.jpg",
+    video:"https://www.youtube.com/embed/tdZ0YhB8exE?si=rPaQ29zVW9JSYbCT",
     desc:"콜라드/케일을 토마토·양파와 볶아낸 서민 반찬. ‘한 주 버티기’라는 뜻을 지님.",
     recipe:[
       "팬에 기름을 두르고 양파를 투명해질 때까지 볶는다",
@@ -1482,8 +1452,8 @@ export const DISHES = [
     country:"Kenya",
     name:"Nyama Choma",
     type:["Grill","Meat","Street"],
-    image:"",
-    video:"",
+    image:"/img/kenya/Nyama Choma.png",
+    video:"https://www.youtube.com/embed/2scxlRTQViE?si=Jn3YXpX6UbkWd-1W",
     desc:"숯불에 구운 염소/소고기 구이. 간단한 양념으로 고기의 풍미를 살린다.",
     recipe:[
       "고기에 소금·후추·레몬즙·기름을 문질러 30분 재운다",
@@ -1497,8 +1467,8 @@ export const DISHES = [
     country:"Kenya",
     name:"Githeri",
     type:["Stew","Bean","Maize","Vegan"],
-    image:"",
-    video:"",
+    image:"/img/kenya/Githeri.jpg",
+    video:"https://www.youtube.com/embed/zyVjnRoMQzQ?si=-Tt3OTrDT6fN1Rw_",
     desc:"삶은 옥수수와 콩을 토마토 소스에 볶아/졸여 먹는 가정식.",
     recipe:[
       "불린 콩과 옥수수를 부드럽게 삶아 체에 밭친다",
@@ -1512,8 +1482,8 @@ export const DISHES = [
     country:"Kenya",
     name:"Mandazi",
     type:["Fry","Dessert","Tea-time"],
-    image:"",
-    video:"",
+    image:"/img/kenya/Mandazi.jpg",
+    video:"https://www.youtube.com/embed/brrlBSDuSQM?si=XOCsYDJ3noDOBU-x",
     desc:"코코넛 향의 도넛/빵 사이. 바삭하고 속은 폭신한 스와힐리 간식.",
     recipe:[
       "밀가루·설탕·베이킹파우더·소금에 코코넛밀크·물·기름을 섞어 반죽",
@@ -1527,8 +1497,8 @@ export const DISHES = [
     country:"Kenya",
     name:"Samosa",
     type:["Fry","Snack","Street"],
-    image:"",
-    video:"",
+    image:"/img/kenya/Samosa.jpg",
+    video:"https://www.youtube.com/embed/3OZn-iCGf5s?si=NnwdXO_xpN7k2AZG",
     desc:"향신료 간 소고기/채소를 넣은 삼각 만두 튀김. 인도 영향을 받은 인기 간식.",
     recipe:[
       "속: 다짐육(또는 감자·완두)을 양파·마늘·생강·가람마살라와 함께 볶아 식힌다",
@@ -1542,8 +1512,8 @@ export const DISHES = [
     country:"Kenya",
     name:"Mukimo",
     type:["Mash","Vegetable","Staple"],
-    image:"",
-    video:"",
+    image:"/img/kenya/Mukimo.jpg",
+    video:"https://www.youtube.com/embed/jEw39dwpAt4?si=-_Fj_ioowu-Kc2Jj",
     desc:"감자에 옥수수·완두/강낭콩·잎채소를 섞어 으깬 키쿠유 전통 요리.",
     recipe:[
       "감자·옥수수·콩을 각각 익도록 삶는다",
@@ -1556,9 +1526,9 @@ export const DISHES = [
     id:"ke-chapati",
     country:"Kenya",
     name:"Chapati",
-    type:["Flatbread","Pan-fry","Side"],
-    image:"",
-    video:"",
+    type:["Bread","Pan-fry","Side"],
+    image:"/img/kenya/Chapati.jpg",
+    video:"https://www.youtube.com/embed/0S71aJE7r2c?si=8zGGD-waelwPhXOd",
     desc:"기름에 살짝 지져 층이 살아있는 동아프리카식 차파티.",
     recipe:[
       "밀가루·소금·미지근한 물(선택: 기름·설탕 조금)로 부드러운 반죽을 만들어 30분 휴지",
@@ -1568,27 +1538,12 @@ export const DISHES = [
     ]
   },
   {
-    id:"ke-irio",
-    country:"Kenya",
-    name:"Irio",
-    type:["Mash","Vegetable","Side"],
-    image:"",
-    video:"",
-    desc:"완두·옥수수·감자를 으깨고 때로는 당근·파를 더한 담백한 매시.",
-    recipe:[
-      "감자를 삶아 으깨고, 완두·옥수수는 따로 데쳐 준비",
-      "팬에 버터/기름을 두르고 파를 살짝 볶아 향을 낸다(선택)",
-      "모든 재료를 섞어 소금으로 간하고 필요 시 우유 조금",
-      "냐마 초마·스튜와 곁들여 제공"
-    ]
-  },
-  {
     id:"ke-pilau",
     country:"Kenya",
     name:"Pilau",
     type:["Rice","Spiced","One-pot"],
-    image:"",
-    video:"",
+    image:"/img/kenya/Pilau.jpg",
+    video:"https://www.youtube.com/embed/OaBcbzYclhE?si=8MJOUFyBnBMObMgG",
     desc:"스와힐리풍 향신료(필라우 마살라)로 지은 향긋한 고기 밥.",
     recipe:[
       "냄비에 기름을 두르고 양파를 깊은 갈색이 나도록 천천히 볶아 단맛 내기",
@@ -1604,8 +1559,8 @@ export const DISHES = [
     country:"Australia",
     name:"Meat Pie",
     type:["Pie","Baked","Savory"],
-    image:"",
-    video:"",
+    image:"/img/australia/Meat Pie.jpg",
+    video:"https://www.youtube.com/embed/QrrUl6Q2G-0?si=ROtwdt7kD8AuawOz",
     desc:"진한 그레이비 고기소를 넣어 구운 호주식 미트 파이.",
     recipe:[
       "필링: 팬에 기름 두르고 양파를 볶은 뒤 다짐 소고기·비프스톡·우스터·토마토페이스트·후추를 넣어 졸인다",
@@ -1621,8 +1576,8 @@ export const DISHES = [
     country:"Australia",
     name:"Lamington",
     type:["Dessert","Cake","Sweet"],
-    image:"",
-    video:"",
+    image:"/img/australia/Lamington.jpg",
+    video:"https://www.youtube.com/embed/dW49Bexh_vI?si=x3l4rTPYXhU0sR3E",
     desc:"스폰지 케이크를 초코 아이싱에 적셔 코코넛에 굴린 호주 디저트.",
     recipe:[
       "스폰지 케이크를 하룻밤 식혀 큐브로 자른다",
@@ -1638,8 +1593,8 @@ export const DISHES = [
     country:"Australia",
     name:"Pavlova",
     type:["Dessert","Meringue","Fruit"],
-    image:"",
-    video:"",
+    image:"/img/australia/Pavlova.jpg",
+    video:"https://www.youtube.com/embed/zlVHWtOoD1g?si=p6N2rRmq5IjXBsi5",
     desc:"겉은 바삭, 속은 마시멜로처럼 부드러운 머랭 케이크 위에 크림과 과일을 올린 디저트.",
     recipe:[
       "머랭: 흰자에 설탕을 나눠 넣어 단단한 뿔이 설 때까지 휘핑(옥수수전분·식초 약간)",
@@ -1655,8 +1610,8 @@ export const DISHES = [
     country:"Australia",
     name:"Vegemite Toast",
     type:["Breakfast","Toast","Savory"],
-    image:"",
-    video:"",
+    image:"/img/australia/Vegemite Toast.jpeg",
+    video:"https://www.youtube.com/embed/nuJbubo2zKA?si=VfgCD27U7okFdukb",
     desc:"버터 바른 토스트에 베지마이트를 아주 얇게 펴 바르는 호주식 아침.",
     recipe:[
       "식빵을 노릇하게 토스트",
@@ -1671,8 +1626,8 @@ export const DISHES = [
     country:"Australia",
     name:"Kangaroo Steak",
     type:["Meat","Grill","Pan-sear"],
-    image:"",
-    video:"",
+    image:"/img/australia/Kangaroo Steak.jpg",
+    video:"https://www.youtube.com/embed/QwVQF0HDOOY?si=DTLMT7Vurb-bx37T",
     desc:"지방이 적어 강한 불에 짧게 구워 먹는 캥거루 스테이크.",
     recipe:[
       "마리네이드: 올리브오일·마늘·후추·허브(타임)·레몬즙을 살짝",
@@ -1687,8 +1642,8 @@ export const DISHES = [
     country:"Australia",
     name:"Crocodile (Skewers/Steak)",
     type:["Meat","Grill","Seafood-adjacent"],
-    image:"",
-    video:"",
+    image:"/img/australia/Crocodile Steak.jpg",
+    video:"https://www.youtube.com/embed/031CS_aAibA?si=lxWlaC-nk01EKfDD",
     desc:"담백한 악어 고기를 레몬·허브로 간단히 양념해 구워 먹는 요리.",
     recipe:[
       "레몬즙·마늘·올리브오일·소금·후추·허브에 20–30분 가볍게 재운다",
@@ -1698,28 +1653,12 @@ export const DISHES = [
     ]
   },
   {
-    id:"au-bushtucker",
-    country:"Australia",
-    name:"Bush Tucker Sampler",
-    type:["Platter","Native","Fusion"],
-    image:"",
-    video:"",
-    desc:"호주 토착 식재료(핑거 라임·왓틀시드·레몬 머틀 등)를 활용한 간단 플래터.",
-    recipe:[
-      "딥: 사워크림+레몬머틀 파우더+소금을 섞어 허브 딥을 만든다",
-      "왓틀시드 듁카: 볶은 왓틀시드·참깨·아몬드·소금·후추를 굵게 빻아 섞기",
-      "프로틴: 캥거루/에뮤 햄 등 얇은 슬라이스(대체 가능)를 준비",
-      "가니시: 핑거 라임 펄·토마토·허브, 담퍼/크래커를 곁들임",
-      "플레이팅: 딥·듁카·프로틴·가니시를 한 접시에 구성해 찍어 먹기"
-    ]
-  },
-  {
     id:"au-anzac",
     country:"Australia",
     name:"ANZAC Biscuits",
     type:["Cookie","Baked","Tea-time"],
-    image:"",
-    video:"",
+    image:"/img/australia/ANZAC Biscuits.jpg",
+    video:"https://www.youtube.com/embed/rexqwRs85X4?si=LnikrFh_mNkNFW_5",
     desc:"귀리·코코넛·골든 시럽으로 만드는 바삭고소한 비스킷.",
     recipe:[
       "마른 재료: 오트·밀가루·설탕·코코넛을 볼에 섞는다",
@@ -1734,8 +1673,8 @@ export const DISHES = [
     country:"Australia",
     name:"Fairy Bread",
     type:["Snack","No-cook","Party"],
-    image:"",
-    video:"",
+    image:"/img/australia/Fairy Bread.jpg",
+    video:"https://www.youtube.com/embed/f34jdSxTUJ8?si=ZZVFAgDcLWMVKQJF",
     desc:"버터 바른 흰 식빵에 ‘스프링클(100’s & 1000’s)’을 듬뿍 뿌린 파티 간식.",
     recipe:[
       "흰 식빵의 가장자리를 제거(선택)",
