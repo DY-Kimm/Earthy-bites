@@ -1,4 +1,4 @@
-// src/data/mapMarkers.js
+// src/data/mapMarkers.js  
 // x, y는 이미지 기준 % (왼쪽→오른쪽, 위→아래)
 const markers = [
   // ASIA

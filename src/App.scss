@@ -5,7 +5,7 @@
   --ink:#2F3837;
   --muted:#6b6b6b;
   --card:#ffffff;
-  --shadow:0 8px 20px rgba(0,0,0,.08);
+  --shadow:0 0.5rem 1.25rem rgba(0,0,0,.08); /* 0 8px 20px */
 }
 
 body{
@@ -14,25 +14,25 @@ body{
   background:#f5f5f5;
 }
 
-.container{width:min(1200px, 92%); margin:0 auto}
+.container{width:min(75rem, 92%); margin:0 auto} /* 1200px */
 .title{
   font-family:"Playfair Display", serif;
-  font-weight:900; letter-spacing:1px;
+  font-weight:900; letter-spacing:0.0625rem; /* 1px */
 }
 
-.header-space{height:72px}  /* 고정 헤더 공간 확보 */
+.header-space{height:4.5rem}  /* 72px 고정 헤더 공간 확보 */
 
 /* 헤더 */
 .site-header{
   position:fixed; inset:0 0 auto 0; z-index:20;
-  background:var(--header); height:72px; display:flex; align-items:center;
-  box-shadow:0 4px 12px rgba(0,0,0,.06);
+  background:var(--header); height:4.5rem; display:flex; align-items:center; /* 72px */
+  box-shadow:0 0.25rem 0.75rem rgba(0,0,0,.06); /* 0 4px 12px */
 }
-.brand{display:flex; align-items:center; gap:10px; font-weight:800}
-.brand img{width:100px; height:100px; border-radius:50%}
+.brand{display:flex; align-items:center; gap:0.625rem; font-weight:800} /* 10px */
+.brand img{width:6.25rem; height:6.25rem; border-radius:50%} /* 100px */
 .brand .title{
-  font-size: 18px;
-  margin-left: -20px;
+  font-size:1.125rem;   /* 18px */
+  margin-left:-1.25rem; /* -20px */
 }
 
 /* === SearchBar pill style === */
@@ -41,14 +41,14 @@ body{
   display: flex;
   align-items: center;
 
-  width: 260px;              /* 👉 너무 크면 줄이세요 */
-  height: 34px;              /* 조금 얇게 */
+  width:16.25rem;            /* 260px */
+  height:2.125rem;           /* 34px */
   background: #FFF8E7;
-  border: 1px solid rgba(0,0,0,.08);
-  border-radius: 999px;
-  padding: 0 36px 0 12px;    /* 오른쪽 버튼 공간 확보 */
-  margin-left: 30px;
-  margin-right: 50px;
+  border: 0.0625rem solid rgba(0,0,0,.08); /* 1px */
+  border-radius: 62.4375rem; /* 999px */
+  padding: 0 2.25rem 0 0.75rem;    /* 0 36px 0 12px */
+  margin-left:1.875rem;      /* 30px */
+  margin-right:3.125rem;     /* 50px */
 }
 
 .searchbar input{
@@ -56,13 +56,13 @@ body{
   border: none;
   outline: none;
   background: transparent;
-  font-size: 14px;
+  font-size:0.875rem; /* 14px */
 }
 
 .searchbar button{
   position: absolute;
-  right: 6px;
-  width: 24px; height: 24px;
+  right:0.375rem;      /* 6px */
+  width:1.5rem; height:1.5rem;  /* 24px */
   border: none;
   background: transparent;
   cursor: pointer;
@@ -71,11 +71,9 @@ body{
   justify-content: center;
 }
 
-
-
 /* ===== Earthy Bites Navbar ===== */
 .eb-nav{
-  display:flex; gap:28px; align-items:center;
+  display:flex; gap:1.75rem; align-items:center; /* 28px */
   position:relative;
 }
 .eb-nav-item{
@@ -84,11 +82,10 @@ body{
 .eb-nav-item::after{
   content:"";
   position:absolute;
-  left:-8px;               /* 좌우 약간 넉넉하게 */
-  right:-8px;
-  top:100%;                /* 링크 바로 아래부터 */
-  height:14px;             /* 빈 공간(틈)만큼 브릿지 */
-  /* 배경 없음 = 투명, 하지만 hover 영역은 유지 */
+  left:-0.5rem;               /* -8px */
+  right:-0.5rem;              /* -8px */
+  top:100%;                   /* 링크 바로 아래부터 */
+  height:0.875rem;            /* 14px */
 }
 .eb-nav-link{
   font-weight:800; cursor:pointer;
@@ -96,9 +93,9 @@ body{
 
 /* Dropdown base */
 .eb-dd{
-  position:absolute; left:50%; top:38px; transform:translateX(-50%) translateY(6px);
-  width:140px; background:#FFF8E7; border-radius:14px; padding:12px 0;
-  box-shadow:0 10px 24px rgba(0,0,0,.12);
+  position:absolute; left:50%; top:2.375rem; transform:translateX(-50%) translateY(0.375rem); /* 38px, 6px */
+  width:8.75rem; background:#FFF8E7; border-radius:0.875rem; padding:0.75rem 0;               /* 140px, 14px, 12px */
+  box-shadow:0 0.625rem 1.5rem rgba(0,0,0,.12);                                                /* 0 10px 24px */
   opacity:0; visibility:hidden; pointer-events:none;
   transition:opacity .18s ease, transform .18s ease, visibility .18s;
   z-index:30;
@@ -106,26 +103,26 @@ body{
 
 /* top white dot (12px) */
 .eb-dd-dot{
-  position:absolute; left:50%; top:-6px; transform:translateX(-50%);
-  width:12px; height:12px; background:#fff; border-radius:50%;
-  box-shadow:0 2px 6px rgba(0,0,0,.15);
+  position:absolute; left:50%; top:-0.375rem; transform:translateX(-50%); /* -6px */
+  width:0.75rem; height:0.75rem; background:#fff; border-radius:50%;      /* 12px */
+  box-shadow:0 0.125rem 0.375rem rgba(0,0,0,.15);                          /* 0 2px 6px */
 }
 
 /* list + inner separators */
 .eb-dd-list{
-  list-style:none; margin:0; padding:0 12px;
+  list-style:none; margin:0; padding:0 0.75rem; /* 12px */
 }
 .eb-dd-row{
-  padding:10px 8px;
-  font-size:14px; 
-  border-top:1px solid transparent; /* first row no line */
+  padding:0.625rem 0.5rem;     /* 10px 8px */
+  font-size:0.875rem; 
+  border-top:0.0625rem solid transparent; /* 1px: first row no line */
   text-align: center;
 }
 .eb-dd-row + .eb-dd-row{
-  border-top:1px solid #ccc;   /* 내부 1px 라인 */
+  border-top:0.0625rem solid #ccc;   /* 내부 1px 라인 */
 }
 .eb-dd-row a{
-  display:block; border-radius:10px;
+  display:block; border-radius:0.625rem; /* 10px */
 }
 .eb-dd-row a:hover{
   background:rgba(0,0,0,.04);
@@ -139,97 +136,90 @@ body{
 /* nav 글자 hover 시 흰색으로 */
 .eb-nav-item:hover .eb-nav-link {
   color: #fff;
-  transition: color 0.2s ease;  /* 부드럽게 바뀌도록 */
+  transition: color 0.2s ease;
 }
 
-
 /* 반응형: 간격 조금 줄이기 */
-@media (max-width:960px){
-  .eb-nav{gap:18px}
-  .eb-dd{width:132px}
+@media (max-width:60rem){      /* 960px */
+  .eb-nav{gap:1.125rem}        /* 18px */
+  .eb-dd{width:8.25rem}        /* 132px */
 }
 
 .icon-actions{
-  margin-left:30px;
+  margin-left:1.875rem; /* 30px */
   display:flex; 
-  gap:14px;
+  gap:0.875rem;         /* 14px */
   align-items:center;
 }
 
 /* 드롭다운 카드들 */
 .hover-tray{
-  position:absolute; left:0; right:0; top:72px; display:flex; gap:18px;
+  position:absolute; left:0; right:0; top:4.5rem; display:flex; gap:1.125rem; /* 72px, 18px */
   justify-content:center; pointer-events:none;
 }
 .hover-card{
   pointer-events:auto;
-  width:120px; background:#fff; border-radius:14px; padding:12px 10px;
+  width:7.5rem; background:#fff; border-radius:0.875rem; padding:0.75rem 0.625rem; /* 120px, 14px, 12px 10px */
   box-shadow:var(--shadow);
-  transform:translateY(-10px); opacity:0; transition:.2s;
+  transform:translateY(-0.625rem); opacity:0; transition:.2s; /* -10px */
 }
 .hover-card.show{transform:translateY(0); opacity:1}
-.hover-card h5{font-size:12px; color:#888; margin-bottom:8px}
-.hover-card ul{display:flex; flex-direction:column; gap:10px}
-.hover-card li a{display:block; padding:6px 8px; border-radius:10px}
+.hover-card h5{font-size:0.75rem; color:#888; margin-bottom:0.5rem} /* 12px, 8px */
+.hover-card ul{display:flex; flex-direction:column; gap:0.625rem}   /* 10px */
+.hover-card li a{display:block; padding:0.375rem 0.5rem; border-radius:0.625rem} /* 6px 8px / 10px */
 .hover-card li a:hover{background:#f3f6f5}
 
 /* 지도 배경 느낌 */
 .hero{
   position: relative;
   width:100%;
-  height:900px;
+  height:56.25rem; /* 900px */
   background: url('/img/main_map.jpg') center / cover no-repeat;
 }
 
 .hero::before{
   content:"";
   position:absolute;
-  inset:0;                  /* top/right/bottom/left:0 */
+  inset:0;
   background: rgba(255,255,255,.9);
-  pointer-events:none;      /* 오버레이 클릭 방해 방지 */
+  pointer-events:none;
 }
 
-/* 오버레이 위로 텍스트 띄우기 */
 /* hero 섹션 전용으로 container 폭 풀기 */
 .hero .container{
   position: relative;
   z-index: 1;
-  max-width: none;    /* 전역 1200px 같은 제한 해제 */
-  width: min(1600px, 95vw);  /* 원하는 상한(예: 1600px) */
+  max-width: none;
+  width: min(100rem, 95vw);  /* 1600px */
   margin: 0 auto;
   padding: 0;
-  top: -100px;
-  right: -20px;
+  top:-6.25rem;   /* -100px */
+  right:-1.25rem; /* -20px */
 }
 
 /* 이미지는 폭 기준으로 키우고 비율 유지 */
 .hero .container > img{
   display: block;
   width: 100%;
-  height: auto;       /* ← 이걸로 비율 유지하며 커짐 */
+  height: auto;
   max-width: none;
 }
 
-
-
 /* Flag Carousel */
-/* 지도와 스와이퍼 사이 간격 */
-/* 지도와 카루셀 사이 간격 */
-/* 지도와 카루셀 사이 간격 */
 .flags{
-  margin-top: 100px;
-  padding-bottom: 36px;
+  margin-top:6.25rem;     /* 100px */
+  padding-bottom:2.25rem; /* 36px */
   position: relative;
 }
 
 /* Swiper: 화살표 색/위치 + 양쪽 동일 여백 */
 .flags .swiper{
-  --swiper-navigation-color: #aaa;       /* 화살표 색 */
-  --swiper-navigation-size: 26px;
-  --swiper-navigation-sides-offset: 12px;
-  padding: 0 48px;                       /* 좌우 여백 */
+  --swiper-navigation-color: #aaa;
+  --swiper-navigation-size: 1.625rem;       /* 26px */
+  --swiper-navigation-sides-offset: 0.75rem;/* 12px */
+  padding: 0 3rem;                          /* 48px */
   box-sizing: content-box;
-  overflow: hidden;                      /* 끝에서 잘림 방지 */
+  overflow: hidden;
 }
 
 /* 슬라이드 카드(원+이름 세트) */
@@ -237,16 +227,16 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;                              /* 원과 텍스트 간격 */
+  gap:0.5rem; /* 8px */
 }
 
 /* 원형 국기 */
 .flag-item{
   aspect-ratio: 1/1;
-  width: 140px;                          /* 크기 조절은 여기서 */
-  border-radius: 999px;
+  width:8.75rem;            /* 140px */
+  border-radius:9999rem;
   overflow: hidden;
-  border: 3px solid #eee;
+  border:0.1875rem solid #eee; /* 3px */
   background: #fff;
   display: flex; align-items: center; justify-content: center;
   transition: transform .18s ease;
@@ -254,187 +244,182 @@ body{
 .flag-item img{ width:100%; height:100%; object-fit: cover; }
 .flag-card:hover .flag-item{ transform: scale(1.02); }
 
-/* 나라 이름(요청: 12px, #aaa) */
+/* 나라 이름 */
 .flag-name{
-  font-size: 12px;
+  font-size:0.75rem; /* 12px */
   color: #656565;
   line-height: 1;
   text-align: center;
 }
 
-/* 반응형에서 살짝 축소하고 싶다면 */
-@media (max-width: 560px){
-  .flag-item{ width: 96px; }
+/* 반응형에서 살짝 축소 */
+@media (max-width:35rem){ /* 560px */
+  .flag-item{ width:6rem; } /* 96px */
 }
-
-
-
-
 
 /* 카드 그리드 */
 .grid{
-  display:grid; gap:26px;
+  display:grid; gap:1.625rem; /* 26px */
   grid-template-columns:repeat(3, 1fr);
 }
-@media (max-width:980px){ .grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:640px){ .grid{grid-template-columns:1fr}}
+@media (max-width:61.25rem){ .grid{grid-template-columns:repeat(2,1fr)}} /* 980px */
+@media (max-width:40rem){ .grid{grid-template-columns:1fr}}              /* 640px */
 
 /* 음식 카드 */
 .card{
-  background:var(--card); border-radius:16px; box-shadow:var(--shadow);
+  background:var(--card); border-radius:1rem; box-shadow:var(--shadow); /* 16px */
   overflow:hidden; position:relative;
-  margin-top: 20px;
+  margin-top:1.25rem; /* 20px */
 }
 .card .thumb{aspect-ratio: 4/3; overflow:hidden}
 .card .thumb img{width:100%; height:100%; object-fit:cover; transition:transform .4s}
 .card:hover .thumb img{transform:scale(1.04)}
-.card .meta{padding:14px 16px}
+.card .meta{padding:0.875rem 1rem} /* 14px 16px */
 .card h4{font-weight:800}
-.badges{display:flex; gap:8px; flex-wrap:wrap; margin:8px 0 2px}
-.badge{padding:4px 10px; border-radius:999px; font-size:12px; background:#eef6f1}
+.badges{display:flex; gap:0.5rem; flex-wrap:wrap; margin:0.5rem 0 0.125rem} /* 8px / 2px */
+.badge{padding:0.25rem 0.625rem; border-radius:999rem; font-size:0.75rem; background:#eef6f1} /* 4px 10px / 12px */
 
 /* 카드 공통 */
 .card, .galleryItem { position: relative; }
 
 /* 좋아요 버튼 */
 .like-btn{
-  position: absolute; right: 14px; bottom: 14px; /* 필요시 top으로 */
-  z-index: 3;                /* ✅ 카드 링크/오버레이보다 위 */
-  pointer-events: auto;      /* ✅ 실제 클릭되도록 */
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 10px; border-radius: 999px;
-  background: #fff; border: 1px solid #e6e6e6;
-  box-shadow: 0 6px 14px rgba(0,0,0,.12);
+  position: absolute; right:0.875rem; bottom:0.875rem; /* 100px / 14px */
+  z-index: 3;
+  pointer-events: auto;
+  display: inline-flex; align-items: center; gap:0.375rem; /* 6px */
+  padding:0.375rem 0.625rem; border-radius:62.4375rem;     /* 6px 10px / 999px */
+  background: #fff; border:0.0625rem solid #e6e6e6;        /* 1px */
+  box-shadow: 0 0.375rem 0.875rem rgba(0,0,0,.12);          /* 0 6px 14px */
 }
-
 .like-btn.is-liked{ border-color: #e57373; background: #fff5f5; }
-
-
 
 /* 디테일 */
 .detail{
-  padding:30px 0 80px;
+  padding:1.875rem 0 5rem; /* 30px 0 80px */
 }
 .detail .media{
-  background:#fff; border-radius:18px; padding:20px; box-shadow:var(--shadow);
-  max-width:840px; margin:0 auto 24px;
+  background:#fff; border-radius:1.125rem; padding:1.25rem; box-shadow:var(--shadow); /* 18px / 20px */
+  max-width:52.5rem; margin:0 auto 1.5rem; /* 840px / 24px */
+  position: relative;
 }
-.detail .back{display:inline-flex; align-items:center; gap:8px; margin:16px 0}
+.like-btn--detail {
+  right: 35rem;   
+  bottom: 14rem;
+  padding: 0.375rem 0.625rem;
+}
+.detail .back{display:inline-flex; align-items:center; gap:0.5rem; margin:1rem 0} /* 8px / 16px */
 
 /* 폼 */
 .form{
-  max-width:520px; margin:40px auto 80px; padding:20px;
-  display:flex; flex-direction:column; gap:14px;
+  max-width:32.5rem; margin:2.5rem auto 5rem; padding:1.25rem; /* 520px / 40px / 80px / 20px */
+  display:flex; flex-direction:column; gap:0.875rem;            /* 14px */
 }
 .input{
-  background:#fff; border:1px solid #e6e6e6; border-radius:10px; padding:14px 16px; font-size:15px;
+  background:#fff; border:0.0625rem solid #e6e6e6; border-radius:0.625rem; /* 1px / 10px */
+  padding:0.875rem 1rem; font-size:0.9375rem;                                 /* 14px 16px / 15px */
 }
 .btn{
-  background:#79c6a3; color:#fff; border:0; border-radius:10px; padding:12px 16px; font-weight:800; cursor:pointer;
+  background:#79c6a3; color:#fff; border:0; border-radius:0.625rem; padding:0.75rem 1rem; font-weight:800; cursor:pointer; /* 10px / 12px 16px */
 }
-.link-muted{font-size:14px; color:#8b8b8b; text-align:center; margin-top:8px}
+.link-muted{font-size:0.875rem; color:#8b8b8b; text-align:center; margin-top:0.5rem} /* 14px / 8px */
 
 /* 푸터 */
-.site-footer{background:var(--footer); color:#fff; padding:28px 0; margin-top:60px; text-align:center}
-
+.site-footer{background:var(--footer); color:#fff; padding:1.75rem 0; margin-top:3.75rem; text-align:center} /* 28px / 60px */
 
 /* FilterSelect.scss */
-
 .fsx { position: relative; display: inline-block; }
 
 .fsx-btn{
-  display:flex; align-items:center; gap:8px;
-  padding:8px 12px; border-radius:10px; border:1px solid #d8e2dc;
+  display:flex; align-items:center; gap:0.5rem;                         /* 8px */
+  padding:0.5rem 0.75rem; border-radius:0.625rem; border:0.0625rem solid #d8e2dc; /* 8px 12px / 10px / 1px */
   background:#fff; font-weight:600; line-height:1; cursor:pointer;
 }
 .fsx-btn:hover{ background:#f9fafb; }
-.fsx-btn.is-open{ border-color:#95D5B2; box-shadow: 0 0 0 3px rgba(149,213,178,.25); }
+.fsx-btn.is-open{ border-color:#95D5B2; box-shadow: 0 0 0 0.1875rem rgba(149,213,178,.25); } /* 3px */
 
-/* ✅ 버튼은 고정, 메뉴는 버튼 아래에 겹쳐 뜸 */
+/* 버튼은 고정, 메뉴는 버튼 아래에 겹쳐 뜸 */
 .fsx-menu{
-  position:absolute; top: calc(100% + 8px); right: 0;
-  background:#fff; border:1px solid #000; border-radius:12px;
+  position:absolute; top: calc(100% + 0.5rem); right: 0; /* 8px */
+  background:#fff; border:0.0625rem solid #000; border-radius:0.75rem;  /* 1px / 12px */
   overflow:hidden; z-index: 30;
-  box-shadow: 0 12px 28px rgba(0,0,0,.10);
+  box-shadow: 0 0.75rem 1.75rem rgba(0,0,0,.10); /* 0 12px 28px */
 }
 
 .fsx-item{
-  width:100%; padding:10px 0; text-align:center;
-  background:#fff; border:0;
-  border-bottom:1px solid rgba(0,0,0,.25);   /* 얇은 검은 구분선 */
+  width:100%; padding:0.625rem 0; text-align:center; /* 10px */
+  background:#fff; border:0; 
+  border-bottom:0.0625rem solid rgba(0,0,0,.25);   /* 1px */
   font-weight:700; color:#111; cursor:pointer;
 }
 .fsx-item:last-child{ border-bottom:0; }
 .fsx-item:hover, .fsx-item.is-active{ background:#f2f7f5; }
 .fsx-item.is-selected{ background:#eee; }
 
-
-
 /* Country 페이지 상단 바 정렬 */
 .country-top{
-  display:flex; align-items:center; gap:12px; justify-content:space-between;
-  margin-bottom:12px;
+  display:flex; align-items:center; gap:0.75rem; justify-content:space-between; /* 12px */
+  margin-bottom:0.75rem; /* 12px */
 }
-.country-title{ font-size:56px;}
-
+.country-title{ font-size:3.5rem;} /* 56px */
 
 /* ===== Auth (Login / Signup) ===== */
 .auth-page{
-  padding-top: 92px;                 /* 고정 헤더 보정 */
+  padding-top:5.75rem; /* 92px */
   min-height: 70vh;
 }
 .auth-back{
   background: none; border: 0; cursor: pointer;
-  margin: 8px 0 6px; color: #333;
+  margin: 0.5rem 0 0.375rem; color: #333; /* 8px 0 6px */
 }
 .auth-wrap{
-  max-width: 640px;
-  margin: 10px auto 80px;
+  max-width:40rem;  /* 640px */
+  margin: 0.625rem auto 5rem; /* 10px / 80px */
   background: transparent;
   display:flex; flex-direction:column; align-items:center;
 }
-.auth-avatar{ margin: 24px 0 18px; opacity:.9; }
+.auth-avatar{ margin: 1.5rem 0 1.125rem; opacity:.9; } /* 24px / 18px */
 
 .auth-form{
   width: 100%;
-  display:flex; flex-direction:column; gap: 14px;
-  margin-top: 6px;
+  display:flex; flex-direction:column; gap:0.875rem;  /* 14px */
+  margin-top:0.375rem;                                 /* 6px */
 }
 .auth-label{
-  font-size: 13px; font-weight: 800; color:#4a4a4a; margin-left:6px;
+  font-size:0.8125rem; font-weight: 800; color:#4a4a4a; margin-left:0.375rem; /* 13px / 6px */
 }
 .auth-input{
   background:#fff;
-  border:1px solid #E2E2E2;
-  border-radius: 12px;
-  padding: 14px 16px;
-  font-size: 15px;
+  border:0.0625rem solid #E2E2E2;        /* 1px */
+  border-radius: 0.75rem;                /* 12px */
+  padding: 0.875rem 1rem;                /* 14px 16px */
+  font-size: 0.9375rem;                  /* 15px */
   outline: none;
 }
-.auth-input:focus{ border-color:#95D5B2; box-shadow:0 0 0 3px rgba(149,213,178,.25); }
+.auth-input:focus{ border-color:#95D5B2; box-shadow:0 0 0 0.1875rem rgba(149,213,178,.25); } /* 3px */
 
 .auth-actions{
-  display:flex; justify-content:flex-end; margin-top:6px;
+  display:flex; justify-content:flex-end; margin-top:0.375rem; /* 6px */
 }
 .auth-btn{
-  background:#79c6a3; color:#fff; border:0; border-radius: 14px;
-  padding: 10px 18px; font-weight: 800; cursor:pointer;
+  background:#79c6a3; color:#fff; border:0; border-radius:0.875rem;
+  padding: 0.625rem 1.125rem; font-weight: 800; cursor:pointer; /* 10px 18px */
 }
 .auth-btn:hover{ filter: brightness(0.96); }
 
 .auth-sub{
-  margin-top: 100px;
-  margin-bottom: 65px;
-  display:flex; flex-direction:column; gap:10px; align-items:center;
+  margin-top: 6.25rem;   /* 100px */
+  margin-bottom: 4.0625rem; /* 65px */
+  display:flex; flex-direction:column; gap:0.625rem; align-items:center; /* 10px */
 }
 .auth-link a{ font-weight: 800; color:#246BFF; }
-.muted{ color:#bdbdbd; font-size: 14px; }
+.muted{ color:#bdbdbd; font-size: 0.875rem; } /* 14px */
 
 /* src/styles/_worldmap.scss */
 .worldmap{
   position: relative;
   width: 100%;
-  min-height: 320px;
+  min-height: 20rem;           /* 320px */
   height: var(--h, 60vh);
   display:flex; align-items:center; justify-content:center;
   padding: 0; margin: 0 auto;
@@ -443,21 +428,21 @@ body{
   > img{
     width: 100%;
     height: 100%;
-    object-fit: contain;   /* ✅ 좌표가 어긋나지 않도록 contain 사용 */
+    object-fit: contain;
     display:block;
     filter: saturate(0.95);
   }
 }
 
-/* src/styles/_worldmap.scss */
+/* src/styles/_worldmap.scss (확장) */
 .worldmap{
   position: relative;
-  width: min(var(--maxW, 1400px), 96vw);  /* 화면 가로 꽉 + 최대값 */
-  aspect-ratio: var(--ratio, 16 / 9);     /* ✅ 지도 비율 고정 → 여백 제거 */
-  height: auto;                            /* 가로에 의해 높이 자동 계산 */
+  width: min(var(--maxW, 87.5rem), 96vw);  /* 1400px */
+  aspect-ratio: var(--ratio, 16 / 9);
+  height: auto;
   max-height: var(--maxH, 80vh);
   margin: 0 auto;
-  overflow: hidden;                        /* 혹시 약간 넘치면 깔끔히 크롭 */
+  overflow: hidden;
 }
 
 .worldmap .map-layer{
@@ -467,16 +452,16 @@ body{
 .worldmap .map-layer > img{
   position: absolute; inset: 0;
   width: 100%; height: 100%;
-  object-fit: contain;                     /* 비율 그대로 딱 맞게 */
+  object-fit: contain;
   display: block;
 }
 
 /* 핀 */
 .worldmap .pin{
   position: absolute;
-  transform: translate(-50%, -100%);       /* 바늘 끝이 좌표에 찍히게 */
+  transform: translate(-50%, -100%);
   line-height: 1;
-  font-size: clamp(18px, 1.8vw, 28px);
+  font-size: clamp(1.125rem, 1.8vw, 1.75rem); /* 18px ~ 28px */
   color: #fff;
   text-decoration: none;
   filter: drop-shadow(0 1px 2px rgba(0,0,0,.35))
@@ -485,11 +470,12 @@ body{
 }
 .worldmap .pin:hover { transform: translate(-50%, -100%) scale(1.1); }
 .worldmap .pin:focus-visible{
-  outline: 3px solid #E63946; outline-offset: 2px; border-radius: 999px;
+  outline: 0.1875rem solid #E63946; /* 3px */
+  outline-offset: 0.125rem;         /* 2px */
+  border-radius: 999rem;
 }
 
 /* 모바일에서 살짝 낮추고 싶다면 */
-@media (max-width: 900px){
+@media (max-width:56.25rem){ /* 900px */
   .worldmap{ max-height: 64vh; }
 }
-

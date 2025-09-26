@@ -11,14 +11,14 @@ const CODE_TO_SLUG = {
   sg: "Singapore",
   it: "Italy",
   fr: "France",
-  gb: "United-Kingdom",   // 네 프로젝트가 'UK'나 'United Kingdom'을 쓰면 그 값으로 바꿔도 됨
+  gb: "UK", 
   ng: "Nigeria",
   eg: "Egypt",
   ma: "Morocco",
   ke: "Kenya",
   au: "Australia",
-  nz: "New-Zealand",      // 'NewZealand'/'New Zealand'를 쓰면 그 값으로
-  us: "USA",              // 'United-States'를 쓰면 그 값으로
+  nz: "New Zealand",
+  us: "America",
   ca: "Canada",
   mx: "Mexico",
   cl: "Chile",

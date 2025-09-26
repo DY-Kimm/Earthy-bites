@@ -30,7 +30,7 @@ export default function DishDetail(){
       <div style={{maxWidth:840, margin:"0 auto"}}>
         <h2 className="title" style={{fontSize:36, marginBottom:10}}>{dish.name}</h2>
         <p style={{color:"#666", marginBottom:14}}>{dish.desc}</p>
-        <LikeButton dishId={dish.id}/>
+        <LikeButton dishId={dish.id} className="like-btn--detail"/>
 
         <hr style={{margin:"24px 0"}}/>
         <h3 style={{marginBottom:8}}>레시피</h3>
