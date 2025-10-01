@@ -29,10 +29,10 @@ body{
   box-shadow:0 0.25rem 0.75rem rgba(0,0,0,.06); /* 0 4px 12px */
 }
 .brand{display:flex; align-items:center; gap:0.625rem; font-weight:800} /* 10px */
-.brand img{width:6.25rem; height:6.25rem; border-radius:50%} /* 100px */
+.brand img{width:3.4rem; height:3.2rem; border-radius:50%} /* 100px */
 .brand .title{
   font-size:1.125rem;   /* 18px */
-  margin-left:-1.25rem; /* -20px */
+  margin-left: 0.5rem; 
 }
 
 /* === SearchBar pill style === */
